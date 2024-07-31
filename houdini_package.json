@@ -1,0 +1,31 @@
+{
+    "path": [
+        "$FXHDAMANAGER"
+    ],
+    "load_package_once": true,
+    "enable": true,
+    "version": "0.0.1",
+    "env": [
+        {
+            "FXHDAMANAGER": [
+                {
+                    "houdini_os == 'windows'": "$SERVER_ROOT/Projects/Code/fxhdamanager"
+                },
+                {
+                    "houdini_os == 'linux'": ""
+                },
+                {
+                    "houdini_os == 'macos'": ""
+                }
+            ]
+        },
+        {
+            "PYTHONPATH": [
+                "$FXHDAMANAGER",
+                {
+                    "method": "append"
+                }
+            ]
+        }
+    ]
+}
